@@ -1,3 +1,5 @@
+
+// Definition of the banana possible states.
 export interface State {
     isPeeled: boolean;
     bitesRemaining: number;

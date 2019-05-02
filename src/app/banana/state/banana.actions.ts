@@ -1,3 +1,5 @@
+// Here we just declare the actions.
+// The state will only be modified in the reducer.
 import { Action } from '@ngrx/store';
 
 export const GET_NEW_BANANA = 'Get New Banana';
@@ -6,6 +8,8 @@ export const EAT_BANANA = 'Eat Banana';
 export const INITIATE_TIME_HOP = 'Initiate Time Hop';
 export const TIME_HOP_COMPLETE = 'Time Hop Complete';
 
+// For an action we give a 'type' which will be used in the Switch case
+// in the Reducer.
 export class GetNewBanana implements Action {  
   readonly type: string = GET_NEW_BANANA;
 
@@ -25,6 +29,7 @@ export class PeelBanana implements Action {
 export class EatBanana implements Action {
   readonly type: string = EAT_BANANA;
 
+  // Here we expect one parameter, type number.
   constructor(public payload: number) {
     console.log('ACTION ' + EAT_BANANA);
   }
